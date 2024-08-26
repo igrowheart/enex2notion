@@ -3,7 +3,7 @@ FROM debian:12-slim AS build
 ENV BUILD_POETRY_VERSION=1.6.1
 
 RUN apt-get update && \
-    apt-get install --no-install-suggests --no-install-recommends --yes python3-venv python3-pip && \
+    apt-get install --no-install-suggests --no-install-recommends --yes python3-venv python3-pip wkhtmltopdf && \
     python3 -m venv /venv && \
     /venv/bin/pip install --upgrade pip
 
